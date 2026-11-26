@@ -1,14 +1,15 @@
 # FastAPI Basics
 
-A small FastAPI learning project with sample endpoints for inspecting requests
-and browsing example orders and restaurants.
+A small FastAPI learning project demonstrating basic routes, request
+inspection, and sample order and restaurant responses. All example data is
+hard-coded; there is no database or persistence layer.
 
 ## Requirements
 
 - Python 3.14 or newer
 - [uv](https://docs.astral.sh/uv/)
 
-## Setup
+## Setup and run
 
 Run these commands from the `fastApiBasics` directory:
 
@@ -17,7 +18,8 @@ uv sync
 uv run fastapi dev main.py
 ```
 
-The API starts at <http://localhost:8000>. Alternatively, run it directly:
+The API starts at <http://localhost:8000>. Alternatively, run the application
+directly:
 
 ```bash
 uv run python main.py
@@ -28,13 +30,13 @@ uv run python main.py
 | Method | Path | Description |
 | --- | --- | --- |
 | `GET` | `/` | Returns `{"Hello": "World"}` |
-| `GET` | `/debug/request-info` | Returns request method, URL, headers, parameters, and client host |
-| `GET` | `/active/orders` | Returns a sample list of active orders |
-| `GET` | `/restaurants` | Returns a sample list of restaurants |
+| `GET` | `/debug/request-info` | Returns request method, URL, headers, path and query parameters, and client host |
+| `GET` | `/active/orders` | Returns sample orders and their statuses |
+| `GET` | `/restaurants` | Returns sample restaurant names and cuisines |
 
-The orders and restaurants are hard-coded examples; no database is configured.
-The request-inspection endpoint includes request headers in its response, so
-use it for local learning rather than exposing it publicly.
+`/debug/request-info` includes request headers in its response. Use this
+learning endpoint only in a local or trusted environment; do not expose it
+publicly.
 
 ## API documentation
 

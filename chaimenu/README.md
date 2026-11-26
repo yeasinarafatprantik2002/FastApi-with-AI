@@ -1,8 +1,7 @@
 # Chai Menu API
 
-A small FastAPI project that serves a sample menu of chai, snacks, and combos.
-Menu entries are stored as in-memory data in `data.py`; no database or
-persistence is configured.
+A small FastAPI project serving sample chai, snack, and combo menu items.
+Entries are held in memory in `data.py`; there is no database or persistence.
 
 ## Requirements
 
@@ -31,11 +30,11 @@ uv run python main.py
 | `GET` | `/` | Returns a welcome message |
 | `GET` | `/menu` | Returns all menu items |
 | `GET` | `/menu?category=chai` | Filters menu items by category |
-| `GET` | `/menu/{item_id}` | Returns a menu item by its numeric ID |
+| `GET` | `/menu/{item_id}` | Returns a menu item by its integer ID |
 
-Category matching is case-insensitive. A category with no matching items
-returns `404`; an unknown menu item ID also returns `404`. Each menu item
-includes its ID, name, category, description, availability, and price.
+Category matching is case-insensitive. Categories currently include `chai`,
+`snack`, and `combo`. Each item includes its ID, name, category, description,
+availability, and price. An unknown category or item ID returns `404`.
 
 ## API documentation
 

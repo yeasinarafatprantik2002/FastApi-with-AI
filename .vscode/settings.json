@@ -9,6 +9,11 @@
 			"path": "chaimenu",
 			"envManager": "ms-python.python:venv",
 			"packageManager": "ms-python.python:pip"
+		},
+		{
+			"path": "pincode",
+			"envManager": "ms-python.python:venv",
+			"packageManager": "ms-python.python:pip"
 		}
 	]
 }
