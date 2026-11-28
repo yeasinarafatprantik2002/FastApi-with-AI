@@ -1,12 +1,13 @@
 # FastAPI Learning Projects
 
-This repository contains three independent FastAPI examples:
+This repository contains four independent FastAPI examples:
 
 | Project | Description |
 | --- | --- |
 | [`fastApiBasics`](./fastApiBasics/README.md) | Request inspection and sample order and restaurant endpoints |
 | [`chaimenu`](./chaimenu/README.md) | An in-memory chai, snack, and combo menu API |
 | [`pincode`](./pincode/README.md) | Single and bulk lookups against an in-memory pincode dataset |
+| [`rangmanch`](./rangmanch/README.md) | A SQLite-backed API for creating and managing play reviews |
 
 Each project has its own `pyproject.toml`, `uv.lock`, and virtual environment.
 Run commands from the project's directory; dependencies are not managed from
@@ -19,10 +20,10 @@ the repository root.
 
 ## Quick start
 
-For example, to run the pincode API:
+For example, to run the Rangmanch review API:
 
 ```bash
-cd pincode
+cd rangmanch
 uv sync
 uv run fastapi dev main.py
 ```
